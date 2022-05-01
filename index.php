@@ -18,14 +18,14 @@ try {
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'ozdrivers.au@gmail.com';                 // SMTP username
-    $mail->Password = 'Fory3523#@';                           // SMTP password
+    $mail->Username = 'example@gmail.com';                 // SMTP username
+    $mail->Password = 'password';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('ozdrivers.au@gmail.com', 'OZDRIVER');
-    $mail->addAddress('admin@ssnventure.com.au');     // Add a recipient
+    $mail->setFrom('example1@gmail.com', 'OZDRIVER');
+    $mail->addAddress('example1@gmail.com');     // Add a recipient
 
     $myArray = explode(',', $_REQUEST['toEmail']);
     foreach ($myArray as $email)
